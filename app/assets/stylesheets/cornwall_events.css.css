@@ -1,0 +1,9 @@
+table.eventlist {
+  border-style: solid;
+  border-width: 1px; }
+
+.list_line_odd {
+  background-color: lightgrey; }
+
+.list_line_even {
+  background-color: white; }

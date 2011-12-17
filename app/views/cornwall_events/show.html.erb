@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Active:</b>
+  <%= @cornwall_event.active %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @cornwall_event.date %>
+</p>
+
+<p>
+  <b>Headline</b><br/>
+  en: <%= @cornwall_event.headline_en %><br/>
+  de: <%= @cornwall_event.headline_de %><br/>
+</p>
+
+<p>
+  <b>Subtitle</b><br/>
+  en:<%= @cornwall_event.subtitle_en %><br/>
+  de:<%= @cornwall_event.subtitle_de %><br/>
+</p>
+
+<p>
+  <b>Text en</b><br/>
+  en:<%= @cornwall_event.text_en %><br/>
+  de:<%= @cornwall_event.text_de %><br/>
+</p>
+
+<p>
+  <b>Pdf url:</b>
+  <%= @cornwall_event.pdf_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_cornwall_event_path(@cornwall_event) %> |
+<%= link_to 'Back', cornwall_events_path %>

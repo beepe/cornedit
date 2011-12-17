@@ -1,0 +1,29 @@
+<h1>Listing cornwall_events</h1>
+
+<table class="eventlist">
+  <tr>
+    <th>Active</th>
+    <th>Date</th>
+    <th>Headline en</th>
+    <th>Headline de</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cornwall_events.each do |cornwall_event| %>
+	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td><%= cornwall_event.active %></td>
+    <td><%= cornwall_event.date %></td>
+    <td style="min-width: 150px;"><%= cornwall_event.headline_en %></td>
+    <td style="min-width: 150px;"><%= cornwall_event.headline_de %></td>
+    <td><%= link_to 'Show', cornwall_event %></td>
+    <td><%= link_to 'Edit', edit_cornwall_event_path(cornwall_event) %></td>
+    <td><%= link_to 'Destroy', cornwall_event, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cornwall event', new_cornwall_event_path %>
