@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215195453) do
+ActiveRecord::Schema.define(:version => 20120203191953) do
 
   create_table "cornwall_events", :force => true do |t|
     t.string   "active"
-    t.date     "date"
+    t.string   "date_or_string_en"
     t.string   "headline_en"
     t.string   "headline_de"
     t.string   "subtitle_en"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(:version => 20111215195453) do
     t.string   "pdf_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sequence_no"
+    t.string   "date_or_string_de"
   end
 
 end

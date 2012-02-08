@@ -2,6 +2,7 @@
 
 <table class="eventlist">
   <tr>
+  	<th>SequenceNo</th>
     <th>Active</th>
     <th>Date</th>
     <th>Headline en</th>
@@ -13,8 +14,9 @@
 
 <% @cornwall_events.each do |cornwall_event| %>
 	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+	<td><%= cornwall_event.sequence_no %></td>		
     <td><%= cornwall_event.active %></td>
-    <td><%= cornwall_event.date %></td>
+    <td><%= cornwall_event.date_or_string_en %></td>
     <td style="min-width: 150px;"><%= cornwall_event.headline_en %></td>
     <td style="min-width: 150px;"><%= cornwall_event.headline_de %></td>
     <td><%= link_to 'Show', cornwall_event %></td>
