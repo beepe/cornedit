@@ -1,9 +1,9 @@
 class CornwallEventsController < ApplicationController
+ 
   # GET /cornwall_events
   # GET /cornwall_events.json
   def index
-    @cornwall_events = CornwallEvent.all
-
+    @cornwall_events = CornwallEvent.order(:sequence_no)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @cornwall_events }
@@ -80,4 +80,6 @@ class CornwallEventsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+
 end

@@ -70,13 +70,12 @@ div.events_text {
 	position:relative;
 }
 div.events_pdf {
-	display: inline;
-	position: absolute;
-	right: 110px;
+	display: block;
+	position: relative;
+	left: 712px;
 	width: 33px;
 	height: 33px;
-	top: 0px;
-	background-image: url(../img/pdficon.gif);
+	top: -66px;
 	background-repeat: no-repeat;
 }
 div.events_footer {

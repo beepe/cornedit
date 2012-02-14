@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Filename:</b>
+  <%= @pdf_flyer.filename %>
+</p>
+
+<p> Öffnen:
+	<%= link_to @pdf_flyer.filename, @path_to_pdf %>
+</p>
+
+<%= link_to 'Back', pdf_flyers_path %>

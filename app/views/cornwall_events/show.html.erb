@@ -1,108 +1,80 @@
+<h1>Preview</h1>
 <p id="notice"><%= notice %></p>
 
-<div class="news_preview" style="position: absolute; top: 100px; left: 50px; width:400px; height:200px">
-<span>Aussehen als News</span>
+<div class="news_preview" style="position: relative; top: 50px; left: 50px; width:520px; height:225px; border: 1px solid black;">
+<span style="padding-left:10px;">Preview as news</span>
+<hr>
 <table id="newstable" class="newstable" align="right">
-	<tr class="news_entry">
-		<td class="news_date">
-			<img class="table_rosebud" src="./img/Cornwall_Rosebutton_klein_transparent.png">
-			<%= @cornwall_event.date_or_string_en %>
-		</td>
-		<td class="news_headline"><%= @cornwall_event.headline_en %></td>
-	</tr>
-	<tr>
-	<td></td>
-	<td class="news_subtitle"><%= @cornwall_event.subtitle_en %></td>
-	</tr>
 
 	<tr class="news_entry">
 		<td class="news_date">
-			<img class="table_rosebud" src="./img/Cornwall_Rosebutton_klein_transparent.png">
-			<%= @cornwall_event.date_or_string_de %>
+			<img class="table_rosebud" src="<%=asset_path "Cornwall_Rosebutton_klein_transparent.png"%>">
+			<%= @cornwall_event.date_or_string_en %>
 		</td>
-		<td class="news_headline"><%= @cornwall_event.headline_de %></td>
+		<td class="news_headline"><%= sanitize(@cornwall_event.headline_en) %></td>
 	</tr>
 	<tr>
 	<td></td>
-	<td class="news_subtitle"><%= @cornwall_event.subtitle_de %></td>
+	<td class="news_subtitle"><%= sanitize(@cornwall_event.subtitle_en) %></td>
+	</tr>
+	<tr><td colspan=2><hr></td></tr>
+	<tr class="news_entry">
+		<td class="news_date">
+			<img class="table_rosebud" src="<%=asset_path "Cornwall_Rosebutton_klein_transparent.png"%>">
+			<%= @cornwall_event.date_or_string_de %>
+		</td>
+		<td class="news_headline"><%= sanitize(@cornwall_event.headline_de) %></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td class="news_subtitle"><%= sanitize(@cornwall_event.subtitle_de) %></td>
 	</tr>
 
 </table>
 </div>
 
-<div class="events_preview" style="position:absolute; top: 100px; left: 500px; width:400px; height:200px">
-<span>Aussehen als Event</span>
-<div class="events_entry">
-	<div class="events_date"><%= @cornwall_event.date_or_string_de %></div>
-	<div class="events_mainbody">
-		<div class="events_headline"><%= @cornwall_event.headline_de %></div>
-		<div class="events_subtitle"><%= @cornwall_event.subtitle_de %></div>
-		<div style="clear:both"></div>
-		<div class="events_text"><%= @cornwall_event.text_de %></div>
-	</div>
+<div style="clear:both">
 </div>
+
+<div class="events_preview" style="position:relative; top: 60px; left: 50px; width:800px; border: 1px solid black;">
+<span style="padding-left:10px;">Preview as event</span>
+<hr>
 <div class="events_entry">
 	<div class="events_date"><%= @cornwall_event.date_or_string_en %></div>
 	<div class="events_mainbody">
-		<div class="events_headline"><%= @cornwall_event.headline_en %></div>
-		<div class="events_subtitle"><%= @cornwall_event.subtitle_en %></div>
+		<div class="events_headline"><%= sanitize(@cornwall_event.headline_en) %></div>
+		<div class="events_subtitle"><%= sanitize(@cornwall_event.subtitle_en) %></div>
 		<div style="clear:both"></div>
-		<div class="events_text"><%= @cornwall_event.text_en %></div>
+		<div class="events_text"><%= sanitize(@cornwall_event.text_en) %></div>
+	</div>
+	<div>
+		<%if @cornwall_event.pdf_url_en? %>
+			<div class="events_pdf" style="background-image:url(<%=asset_path "pdficon.gif"%>);"></div>
+		<%end%>	
 	</div>
 </div>
+<hr>
+<div class="events_entry">
+	<div class="events_date"><%= @cornwall_event.date_or_string_de %></div>
+	<div class="events_mainbody">
+		<div class="events_headline"><%= sanitize(@cornwall_event.headline_de) %></div>
+		<div class="events_subtitle"><%= sanitize(@cornwall_event.subtitle_de) %></div>
+		<div style="clear:both"></div>
+		<div class="events_text"><%= sanitize(@cornwall_event.text_de) %></div>
+	</div>
+	<div>
+		<%if @cornwall_event.pdf_url_de? %>
+			<div class="events_pdf" style="background-image:url(<%=asset_path "pdficon.gif"%>);"></div>
+		<%end%>	
+	</div>		
+</div>
 </div>
 
 
 
-<div style="position: absolute; top:500px;">
+<div style="position: relative; top:60px;">
 	
 <%= link_to 'Edit', edit_cornwall_event_path(@cornwall_event) %> |
 <%= link_to 'Back', cornwall_events_path %><br>
-
-	<span>Data details:</span>
-<p>
-  <b>Sequence No:</b>
-  <%= @cornwall_event.sequence_no %>
-</p>
-
-<p>
-  <b>Active:</b>
-  <%= @cornwall_event.active %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @cornwall_event.date_or_string_en %>
-  <%= @cornwall_event.date_or_string_de %>  
-</p>
-
-<p>
-  <b>Headline</b><br/>
-  en: <%= @cornwall_event.headline_en %><br/>
-  de: <%= @cornwall_event.headline_de %><br/>
-</p>
-
-<p>
-  <b>Subtitle</b><br/>
-  en:<%= @cornwall_event.subtitle_en %><br/>
-  de:<%= @cornwall_event.subtitle_de %><br/>
-</p>
-
-<p>
-  <b>Text en</b><br/>
-  en:<%= @cornwall_event.text_en %><br/>
-  de:<%= @cornwall_event.text_de %><br/>
-</p>
-
-<p>
-  <b>Pdf url:</b>
-  <%= @cornwall_event.pdf_url %>
-</p>
-
-
-
-
-<%= link_to 'Edit', edit_cornwall_event_path(@cornwall_event) %> |
-<%= link_to 'Back', cornwall_events_path %>
 
 </div>

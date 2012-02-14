@@ -11,41 +11,42 @@
     </div>
   <% end %>
 
-<div id="topline" style="width:820px; height: 100px; position: absolute; top:100px; left:50px;  background-color: darkgrey; padding: 10px;">
+<div id="topline" style="width:820px; height: 28px; position: relative; top:0px; left:50px;  background-color: darkgrey; padding: 10px;">
   <div class="field">
     <%= f.label :sequence_no %>    <%= f.text_field :sequence_no %>
   </div>
   
   <div class="field">
-    <%= f.label :active %>    <%= f.text_field :active %>
+    <%= f.label :active %>    <%= f.select :active, %w[no events news both]%>
   </div>
 
 
 
-  <div class="field">
-    <%= f.label :pdf_url %>    <%= f.text_field :pdf_url %>
-  </div>
 </div>  
 
-<div id="#left" style="width:400px; height:500px; position:absolute; top:220px; left:50px; background-color: lightgrey; padding: 10px;">
+<div id="#left" style="width:400px; height:500px; position:relative; top:0px; left:50px; background-color: lightgrey; padding: 10px;">
    <div class="field">
-    <%= f.label :date_or_string_en %>    <%= f.text_field :date_or_string_en %>
+Date / Label en   <%= f.text_field :date_or_string_en %>
   </div>
    
   <div class="field">
     <%= f.label :headline_en %><br />
-    <%= f.text_field :headline_en %>
+    <%= f.text_field :headline_en, :size=>54 %>
   </div>
   
   <div class="field">
     <%= f.label :subtitle_en %><br />
-    <%= f.text_field :subtitle_en %>
+    <%= f.text_field :subtitle_en, :size=>54 %>
   </div>
   
   <div class="field">
     <%= f.label :text_en %><br />
     <%= f.text_area :text_en %>
   </div>  
+  
+  <div class="field">
+PDF Flyer en   <%= f.select :pdf_url_en, PdfFlyer.all.collect {|p| [p.filename]},{:include_blank => 'None'} %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
@@ -53,25 +54,30 @@
 
 </div>
 
-<div id="#right" style="width:400px; height:500px; position:absolute; top:220px; padding-left: 50px; left:470px; background-color: lightgrey; padding:10px;">
+<div id="#right" style="width:400px; height:500px; position:relative; top:-520px; padding-left: 50px; left:470px; background-color: lightgrey; padding:10px;">
   <div class="field">
-    <%= f.label :date_or_string_de %>    <%= f.text_field :date_or_string_de %>
+Date/Label de  <%= f.text_field :date_or_string_de %>
   </div>
   
   <div class="field">
     <%= f.label :headline_de %><br />
-    <%= f.text_field :headline_de %>
+    <%= f.text_field :headline_de, :size=>54 %>
   </div>  
   
   <div class="field">
     <%= f.label :subtitle_de %><br />
-    <%= f.text_field :subtitle_de %>
+    <%= f.text_field :subtitle_de, :size=>54 %>
   </div>  
   
   <div class="field">
     <%= f.label :text_de %><br />
     <%= f.text_area :text_de %>
-  </div>  
+  </div>
+  
+  <div class="field">
+PDF Flyer de  <%= f.select :pdf_url_de, PdfFlyer.all.collect {|p| [p.filename]}, {:include_blank => 'None'}%>
+  </div>
+  
 </div>
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120203191953) do
+ActiveRecord::Schema.define(:version => 20120211141953) do
 
   create_table "cornwall_events", :force => true do |t|
     t.string   "active"
@@ -22,11 +22,18 @@ ActiveRecord::Schema.define(:version => 20120203191953) do
     t.string   "subtitle_de"
     t.text     "text_en"
     t.text     "text_de"
-    t.string   "pdf_url"
+    t.string   "pdf_url_en"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sequence_no"
     t.string   "date_or_string_de"
+    t.string   "pdf_url_de"
+  end
+
+  create_table "pdf_flyers", :force => true do |t|
+    t.string   "filename"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

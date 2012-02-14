@@ -1,4 +1,9 @@
-<h1>Listing cornwall_events</h1>
+<h1>Cornwall Events Editor - Listing</h1>
+<hr>
+<%= link_to 'Go to PDF Maintenance', :pdf_flyers %>
+<hr>
+
+<p id="notice"><%= notice %></p>
 
 <table class="eventlist">
   <tr>
@@ -7,6 +12,7 @@
     <th>Date</th>
     <th>Headline en</th>
     <th>Headline de</th>
+    <th>PDF?</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,8 +23,10 @@
 	<td><%= cornwall_event.sequence_no %></td>		
     <td><%= cornwall_event.active %></td>
     <td><%= cornwall_event.date_or_string_en %></td>
+    
     <td style="min-width: 150px;"><%= cornwall_event.headline_en %></td>
     <td style="min-width: 150px;"><%= cornwall_event.headline_de %></td>
+    <td><%= (cornwall_event.pdf_url_de.blank?&&cornwall_event.pdf_url_en.blank?)?"-":"PDF" %>
     <td><%= link_to 'Show', cornwall_event %></td>
     <td><%= link_to 'Edit', edit_cornwall_event_path(cornwall_event) %></td>
     <td><%= link_to 'Destroy', cornwall_event, confirm: 'Are you sure?', method: :delete %></td>
@@ -28,4 +36,5 @@
 
 <br />
 
-<%= link_to 'New Cornwall event', new_cornwall_event_path %>
+<%= link_to 'Create new Cornwall event', new_cornwall_event_path %><br>
+<%= link_to 'Write to file and activate', json_writer_write_json_file_path %>

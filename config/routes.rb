@@ -1,6 +1,14 @@
 Cornedit::Application.routes.draw do
-  resources :cornwall_events
+  get "json_writer/write_json_file"
 
+  resources :pdf_flyers
+  resources :cornwall_events
+  
+  
+  
+
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

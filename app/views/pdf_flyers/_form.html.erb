@@ -1,0 +1,21 @@
+<%= form_for(@pdf_flyer) do |f| %>
+  <% if @pdf_flyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdf_flyer.errors.count, "error") %> prohibited this pdf_flyer from being saved:</h2>
+
+      <ul>
+      <% @pdf_flyer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field hidenew">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="actions hidenew">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,62 @@
+<h1>New pdf_flyer</h1>
+
+<!-- Invoke the Photo Controller's "create" action -->
+<%= form_for(@pdf_flyer) do |f| %>
+
+ <% if @pdf_flyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdf_flyer.errors.count, "error") %> prohibited this pdf_flyer from being saved:</h2>
+
+      <ul>
+      <% @pdf_flyer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label "data" %><br />
+    <!-- Upload file and invoke "load_photo_file" method in the Controller to process the upload file -->
+    <%= f.file_field :load_pdf_file %>
+  </p>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+
+
+
+<!--
+<span>Please select file and press upload</span>
+<%= form_tag({:controller => "upload", :action => "upload_file"}, :multipart => true) do %>
+  <%= file_field_tag('filename') %>
+  <%= submit_tag('Upload') %>
+<% end %>
+
+<%= form_for(@pdf_flyer) do |f| %>
+  <% if @pdf_flyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdf_flyer.errors.count, "error") %> prohibited this pdf_flyer from being saved:</h2>
+
+      <ul>
+      <% @pdf_flyer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.file_field :filename %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+//-->
+
+<%= link_to 'Back', pdf_flyers_path %>

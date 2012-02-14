@@ -1,0 +1,521 @@
+=> Booting WEBrick
+=> Rails 3.1.3 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+
+
+Started GET "/pdf_flyers/new" for 127.0.0.1 at 2012-02-09 20:39:32 +0100
+  Processing by PdfFlyersController#new as HTML
+Rendered pdf_flyers/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 169ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /cornwall_events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /cornwall_events.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:37 +0100
+Served asset /upload.js - 304 Not Modified (1ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x47522b8 @original_filename="AlleInfos.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"AlleInfos.txt\"\r\nContent-Type: text/plain\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1w9gbel>>}, "commit"=>"Create"}
++++Now in create+++
+myfilename is AlleInfos.txt
+params is {"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x47522b8 @original_filename="AlleInfos.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"AlleInfos.txt\"\r\nContent-Type: text/plain\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1w9gbel>>}
+  [1m[36mPdfFlyer Load (0.0ms)[0m  [1mSELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'AlleInfos.txt' LIMIT 1[0m
+retrieved flyer with that name is AlleInfos.txt
+Redirected to http://localhost:3000/pdf_flyers
+Completed 302 Found in 46ms
+
+
+Started GET "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+  Processing by PdfFlyersController#index as HTML
+  [1m[35mPdfFlyer Load (0.0ms)[0m  SELECT "pdf_flyers".* FROM "pdf_flyers" 
+Rendered pdf_flyers/index.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:42 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/pdf_flyers/new" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+  Processing by PdfFlyersController#new as HTML
+Rendered pdf_flyers/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:39:47 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:39:51 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x5c2f050 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1ydcbcw>>}, "commit"=>"Create"}
++++Now in create+++
+myfilename is arnds_cover.doc
+params is {"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x5c2f050 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1ydcbcw>>}
+  [1m[36mPdfFlyer Load (0.0ms)[0m  [1mSELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'arnds_cover.doc' LIMIT 1[0m
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `filename' for nil:NilClass):
+  app/controllers/pdf_flyers_controller.rb:52:in `create'
+
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x5883d38 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1upp76s>>}, "commit"=>"Create"}
++++Now in create+++
+myfilename is arnds_cover.doc
+params is {"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x5883d38 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-1upp76s>>}
+  [1m[35mPdfFlyer Load (1.0ms)[0m  SELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'arnds_cover.doc' LIMIT 1
+  [1m[36mSQL (56.0ms)[0m  [1mINSERT INTO "pdf_flyers" ("created_at", "filename", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 09 Feb 2012 19:40:39 UTC +00:00], ["filename", "arnds_cover.doc"], ["updated_at", Thu, 09 Feb 2012 19:40:39 UTC +00:00]]
+Redirected to http://localhost:3000/pdf_flyers
+Completed 302 Found in 63ms
+
+
+Started GET "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+  Processing by PdfFlyersController#index as HTML
+  [1m[35mPdfFlyer Load (1.0ms)[0m  SELECT "pdf_flyers".* FROM "pdf_flyers" 
+Rendered pdf_flyers/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pdf_flyers/new" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+  Processing by PdfFlyersController#new as HTML
+Rendered pdf_flyers/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:42 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x4611c78 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-78n2jn>>}, "commit"=>"Create"}
++++Now in create+++
+myfilename is arnds_cover.doc
+params is {"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x4611c78 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-78n2jn>>}
+  [1m[36mPdfFlyer Load (0.0ms)[0m  [1mSELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'arnds_cover.doc' LIMIT 1[0m
+retrieved flyer with that name is arnds_cover.doc
+Redirected to http://localhost:3000/pdf_flyers
+Completed 302 Found in 4ms
+
+
+Started GET "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+  Processing by PdfFlyersController#index as HTML
+  [1m[35mPdfFlyer Load (1.0ms)[0m  SELECT "pdf_flyers".* FROM "pdf_flyers" 
+Rendered pdf_flyers/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:45 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:40:46 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pdf_flyers/new" for 127.0.0.1 at 2012-02-09 20:41:51 +0100
+
+SyntaxError (C:/Users/BPf_2/Development/workspace/cornedit/app/controllers/pdf_flyers_controller.rb:94: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started GET "/pdf_flyers/new" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+  Processing by PdfFlyersController#new as HTML
+Rendered pdf_flyers/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /pdf_flyers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /pdf_file.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /cornwall_events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_file.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /pdf_file.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pdf_flyers.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /pdf_flyers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /upload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-09 20:42:05 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:42:09 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x58868b8 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-tmajw7>>}, "commit"=>"Create"}
+  [1m[36mPdfFlyer Load (0.0ms)[0m  [1mSELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'arnds_cover.doc' LIMIT 1[0m
+Redirected to http://localhost:3000/pdf_flyers
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pdf_flyers" ("created_at", "filename", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 09 Feb 2012 19:42:09 UTC +00:00], ["filename", "arnds_cover.doc"], ["updated_at", Thu, 09 Feb 2012 19:42:09 UTC +00:00]]
+Redirected to 
+Completed 500 Internal Server Error in 10ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/pdf_flyers_controller.rb:57:in `block (2 levels) in create'
+  app/controllers/pdf_flyers_controller.rb:55:in `create'
+
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Users/BPf_2/Development/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started POST "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:42:50 +0100
+  Processing by PdfFlyersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YHfPVo9nvQVa2DMpXK8F+JgIB4L9wr17N4E/DIt1hk=", "pdf_flyer"=>{"load_pdf_file"=>#<ActionDispatch::Http::UploadedFile:0x5883570 @original_filename="arnds_cover.doc", @content_type="application/msword", @headers="Content-Disposition: form-data; name=\"pdf_flyer[load_pdf_file]\"; filename=\"arnds_cover.doc\"\r\nContent-Type: application/msword\r\n", @tempfile=#<File:C:/Users/BPf_2/AppData/Local/Temp/RackMultipart20120209-4652-k2k8pv>>}, "commit"=>"Create"}
+  [1m[36mPdfFlyer Load (1.0ms)[0m  [1mSELECT "pdf_flyers".* FROM "pdf_flyers" WHERE "pdf_flyers"."filename" = 'arnds_cover.doc' LIMIT 1[0m
+Redirected to http://localhost:3000/pdf_flyers
+Completed 302 Found in 1ms
+
+
+Started GET "/pdf_flyers" for 127.0.0.1 at 2012-02-09 20:42:50 +0100
+  Processing by PdfFlyersController#index as HTML
+  [1m[35mPdfFlyer Load (0.0ms)[0m  SELECT "pdf_flyers".* FROM "pdf_flyers" 
+Rendered pdf_flyers/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cornwall_events.css.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:50 +0100
+Served asset /cornwall_events.css.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cornwall_events.css?body=1" for 127.0.0.1 at 2012-02-09 20:42:50 +0100
+Served asset /cornwall_events.css - 304 Not Modified (0ms)

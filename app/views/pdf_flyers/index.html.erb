@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>PDF Flyers Maintenance</h1>
+<hr>
+<%= link_to 'Go to Events Maintenance', :cornwall_events %>
+<hr>
+
+<table>
+  <tr>
+    <th>Filename</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pdf_flyers.each do |pdf_flyer| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td><%= pdf_flyer.filename %></td>
+    <td><%= link_to 'Show', pdf_flyer %></td>
+    <td><%= link_to 'Destroy', pdf_flyer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+Msg: <% @rendertext %> <br/>
+<%= link_to 'New Pdf flyer', new_pdf_flyer_path %>

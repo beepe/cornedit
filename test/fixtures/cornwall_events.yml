@@ -2,22 +2,28 @@
 
 one:
   active: MyString
-  date: 2011-12-15
+  date_or_string_en: MyString
   headline_en: MyString
   headline_de: MyString
   subtitle_en: MyString
   subtitle_de: MyString
   text_en: MyText
   text_de: MyText
-  pdf_url: MyString
-
+  pdf_url_en: MyString
+  sequence_no: MyInt
+  date_or_string_de: MyString
+  pdf_url_de: MyString
+  
 two:
   active: MyString
-  date: 2011-12-15
+  date_or_string_en: MyString
   headline_en: MyString
   headline_de: MyString
   subtitle_en: MyString
   subtitle_de: MyString
   text_en: MyText
   text_de: MyText
-  pdf_url: MyString
+  pdf_url_en: MyString
+  sequence_no: MyInt
+  date_or_string_de: MyString
+  pdf_url_de: MyString
