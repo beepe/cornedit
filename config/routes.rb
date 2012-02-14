@@ -4,7 +4,8 @@ Cornedit::Application.routes.draw do
   resources :pdf_flyers
   resources :cornwall_events
   
-  
+  root :to => 'cornwall_events#index'
+
   
 
   
