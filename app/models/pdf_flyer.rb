@@ -9,7 +9,7 @@ class PdfFlyer < ActiveRecord::Base
    after_save :save_pdf
    
    # Invoke delete_pdf when delete is complete
-   before_destroy :ensure_not_referenced_by_any_cornwall_event, :delete_pdf
+   before_destroy :delete_pdf
    
    
    # "f.file_field :load_photo_file" in the view triggers Rails to invoke this method
@@ -34,16 +34,7 @@ class PdfFlyer < ActiveRecord::Base
      end
    end
    
-   private
-     # ensure that there are no line items referencing this product
-     def ensure_not_referenced_by_any_line_item
-       if line_items.empty?
-         return true
-      else
-         errors.add(:base, 'Line Items present')
-        return false
-      end
-    end
+
 
 
    # Called to delete a file
