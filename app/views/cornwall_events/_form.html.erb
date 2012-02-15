@@ -13,11 +13,11 @@
 
 <div id="topline" style="width:820px; height: 28px; position: relative; top:0px; left:50px;  background-color: darkgrey; padding: 10px;">
   <div class="field">
-    <%= f.label :sequence_no %>    <%= f.text_field :sequence_no %>
+    <%= f.label :sequence_no %> <%= image_tag("info.gif", :size => "16x16", :title => "Controls the sequence order in the list")%>   <%= f.text_field :sequence_no %>
   </div>
   
   <div class="field">
-    <%= f.label :active %>    <%= f.select :active, %w[no events news both]%>
+    <%= f.label :active %>  <%= image_tag("info.gif", :size => "16x16", :title => "Controls the visibility in events and news")%>  <%= f.select :active, %w[no events news both]%>
   </div>
 
 
@@ -40,7 +40,7 @@ Date / Label en   <%= f.text_field :date_or_string_en %>
   </div>
   
   <div class="field">
-    <%= f.label :text_en %><br />
+    <%= f.label :text_en %> <%= image_tag("info.gif", :size => "16x16", :title => "Not visible in news")%> <br />
     <%= f.text_area :text_en %>
   </div>  
   

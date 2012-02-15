@@ -48,7 +48,7 @@ class PdfFlyersController < ApplicationController
     check_flyer = PdfFlyer.find_by_filename(myfilename)
     if check_flyer
       respond_to do |format|
-        format.html { redirect_to pdf_flyers_url, notice: 'Pdf flyer '+myfilename+' already exists! (id '+check_flyer.id.to_s+')' }
+        format.html { redirect_to pdf_flyers_url, alert: 'Pdf flyer '+myfilename+' already exists! (id '+check_flyer.id.to_s+')' }
       end
     else
     
