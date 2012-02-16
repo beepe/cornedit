@@ -5,3 +5,20 @@
  *= require_self
  *= require_tree . 
 */
+
+   table.eventlist {
+     border-style: solid;
+     border-width: 1px;
+   }
+   
+   table.eventlist.td {
+     padding: 2px;
+   }
+   
+   .list_line_odd {
+     background-color: lightgrey;
+   }
+  
+   .list_line_even {
+     background-color: white;
+   }

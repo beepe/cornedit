@@ -29,7 +29,7 @@
     <td><%= (cornwall_event.pdf_url_de.blank?&&cornwall_event.pdf_url_en.blank?)?"-":"PDF" %>
     <td><%= link_to 'Show', cornwall_event %></td>
     <td><%= link_to 'Edit', edit_cornwall_event_path(cornwall_event) %></td>
-    <td><%= link_to 'Destroy', cornwall_event, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', cornwall_event, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

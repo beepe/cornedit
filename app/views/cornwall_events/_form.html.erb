@@ -24,7 +24,7 @@
 
 </div>  
 
-<div id="#left" style="width:400px; height:500px; position:relative; top:0px; left:50px; background-color: lightgrey; padding: 10px;">
+<div id="#left" style="width:400px; height:500px; position:relative; top:0px; left:50px; background-image: url(/assets/britflag.gif); background-color: lightgrey; padding: 10px;">
    <div class="field">
 Date / Label en   <%= f.text_field :date_or_string_en %>
   </div>
@@ -54,7 +54,7 @@ PDF Flyer en   <%= f.select :pdf_url_en, PdfFlyer.all.collect {|p| [p.filename]}
 
 </div>
 
-<div id="#right" style="width:400px; height:500px; position:relative; top:-520px; padding-left: 50px; left:470px; background-color: lightgrey; padding:10px;">
+<div id="#right" style="width:400px; height:500px; position:relative; top:-520px; padding-left: 50px; left:470px; background-image: url(/assets/deflag.gif); background-color: lightgrey; padding:10px;">
   <div class="field">
 Date/Label de  <%= f.text_field :date_or_string_de %>
   </div>

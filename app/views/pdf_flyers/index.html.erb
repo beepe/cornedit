@@ -1,12 +1,16 @@
+<% if notice then%>
 <p id="notice"><%= notice %></p>
+<% end
+   if alert then%>
 <p id="alert"><%= alert %></p>
+<% end%>
 
 <h1>PDF Flyers Maintenance</h1>
 <hr>
 <%= link_to 'Go to Events Maintenance', :cornwall_events %>
 <hr>
 
-<table>
+<table class="eventlist">
   <tr>
     <th>Filename</th>
     <th></th>
@@ -18,7 +22,7 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= pdf_flyer.filename %></td>
     <td><%= link_to 'Show', pdf_flyer %></td>
-    <td><%= link_to 'Destroy', pdf_flyer, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', pdf_flyer, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
